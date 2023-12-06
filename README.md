@@ -12,8 +12,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw/hub?share=true)
+- Live Site URL: [Live site URL](https://time-tracking-dashboard-solution-delta.vercel.app/)
 
 ### Built with
 
