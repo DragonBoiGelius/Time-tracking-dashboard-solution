@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    /* colors */
+    /* primary */
+    --clr-blue: hsl(246, 80%, 60%);
+    --clr-light-red: hsl(15, 100%, 70%);
+    --clr-soft-blue: hsl(195, 74%, 62%);
+    --clr-red: hsl(348, 100%, 68%);
+    --clr-lime-green: hsl(145, 58%, 55%);
+    --clr-violet: hsl(264, 64%, 52%);
+    --clr-soft-orange: hsl(43, 84%, 65%);
+    /* neutral */
+    --clr-very-dark-blue: hsl(226, 43%, 10%);
+    --clr-dark-blue: hsl(235, 46%, 20%);
+    --clr-desaturated-blue: hsl(235, 45%, 61%);
+    --clr-pale-blue: hsl(236, 100%, 87%);
+
+    /* typography */
+    --font-family: 'Rubik', sans-serif;
+    --font-size: 18px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 100px;
+    color: white;
+    background-color: var(--clr-very-dark-blue);
+}
+
+button {
+    margin-top: 20px;
+    color: var(--clr-desaturated-blue);
+    background-color: transparent;
+    border: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    cursor: pointer;
+}
+
+button:active {color: white;}
+
+.active-button {color: white;}
+
+
+/* ----- */
+/* grid */
+/* ----- */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'personal'
+    'work'
+    'play'
+    'study'
+    'exercise'
+    'social'
+    'selfcare';
+    gap: 30px;
+}
+
+.personal-card {grid-area: personal;}
+
+.work-card {grid-area: work;}
+
+.play-card {grid-area: play;}
+
+.study-card {grid-area: study;}
+
+.exercise-card {grid-area: exercise;}
+
+.social-card {grid-area: social;}
+
+.selfcare-card {grid-area: selfcare;}
+
+
+/* ----- */
+/* card */
+/* ----- */
+.card {
+    width: 330px;
+    position: relative;
+}
+
+.card .card-header {
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.card-header .icon {
+    position: absolute;
+    top: -9px;
+    right: 20px;
+}
+
+.card .card-body {
+    height: 120px;
+    margin-top: 40px;
+    padding-block: 25px;
+    padding-inline: 20px;
+    z-index: 1;
+    background-color: var(--clr-dark-blue);
+    border-radius: 15px;
+}
+
+.card:not(.personal-card) .card-body:hover {cursor: pointer;}
+
+.card:not(.personal-card) .card-body:active:not(:has(:active)) {background-color: var(--clr-desaturated-blue);}
+
+.card-body .card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.card-title .ellipsis {
+    cursor: pointer;
+}
+
+.card-title .ellipsis:active {
+    filter: brightness(0) invert(1);
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-content h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.card-content p {
+    color: var(--clr-pale-blue);
+    font-size: 0.85rem;
+}
+
+
+/* ----- */
+/* cards */
+/* ----- */
+/* personal */
+.personal-card {
+    height: 205px;
+}
+
+.personal-card .card-header {
+    height: 135px;
+    padding: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1;
+    background-color: var(--clr-blue);
+    border-radius: 15px;
+}
+
+.personal-card .avatar {
+    width: 70px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.personal-card .name-container span {
+    color: var(--clr-pale-blue);
+    font-size: 0.85rem;
+}
+
+.personal-card .name-container p {
+    font-size: 1.35rem;
+    font-weight: 300;
+}
+    
+.personal-card .card-body {
+    width: 100%;
+    height: 200px;
+    padding-inline: 30px;
+
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    
+    z-index: 0;
+
+    border-radius: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+/* work */
+.work-card .card-header {background-color: var(--clr-light-red);}
+
+/* play */
+.play-card .card-header {background-color: var(--clr-soft-blue);}
+
+/* study */
+.study-card .card-header {background-color: var(--clr-red);}
+
+/* exercise */
+.exercise-card .card-header {background-color: var(--clr-lime-green);}
+
+/* social */
+.social-card .card-header {background-color: var(--clr-violet);}
+
+/* selfcare */
+.selfcare-card .card-header {background-color: var(--clr-soft-orange);}
+
+
+/* attribution */
+.attribution { 
+    position: fixed;
+    bottom: 20px;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* media */
+@media screen and (min-width: 750px) {
+    body {
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-container {
+        grid-template-areas: 
+        'personal work'
+        'personal play'
+        'study exercise'
+        'social selfcare';
+    }
+
+    .personal-card {
+        height: auto;
+    }
+
+    .personal-card .card-header {
+        height: 190px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .personal-card .card-body {
+        height: 250px;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .grid-container {
+        grid-template-areas: 
+        'personal work play'
+        'personal study exercise'
+        '. social selfcare';
+    }
+
+    .card {
+        width: 255px;
+    }
+
+    .card .card-body {
+        height: 200px;
+        padding: 30px;
+        margin-top: 45px;
+    }
+
+    .card-body .card-title {
+        margin-bottom: 25px;
+    }
+
+    .card-content {
+        display: block;
+    }
+
+    .card-content h1 {
+        margin-bottom: 5px;
+        font-size: 3.1rem;
+    }
+
+    .personal-card .card-header {
+        height: 355px;
+        padding: 30px;
+        padding-top: 35px;
+        position: relative;
+        display: block;
+    }
+
+    .personal-card .avatar {
+        width: 85px;
+        margin-bottom: 35px;
+    }
+
+    .personal-card .name-container p {
+        font-size: 2.25rem;
+    }
+
+    .personal-card .card-body {
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .grid-container {
+        grid-template-areas: 
+        'personal work play study'
+        'personal exercise social selfcare';
+    }
+}

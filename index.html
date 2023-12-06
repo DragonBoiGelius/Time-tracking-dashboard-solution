@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+
+<body>
+
+  <section class="grid-container">
+
+    <div class="card personal-card">
+      <div class="card-header">
+        <img class="avatar" src="./images/image-jeremy.png" alt="avatar">
+        <div class="name-container">
+          <span>Report for</span>
+          <p>Jeremy Robson</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <button class="" id="daily-button" onclick="ChooseDaily()">Daily</button>
+        <button class="active-button" id="weekly-button" onclick="ChooseWeekly()">Weekly</button>
+        <button class="" id="monthly-button" onclick="ChooseMonthly()">Monthly</button>
+      </div>
+    </div> <!-- personal-card -->
+
+    <div class="card work-card">
+      <div class="card-header">
+        <img class="icon" src="./images/icon-work.svg" alt="work-icon">
+      </div>
+      <div class="card-body">
+        <div class="card-title">
+          <span>Work</span>
+          <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+        </div>
+        <div class="card-content">
+          <h1 id="work-timeframe-current">32hrs</h1>
+          <p>Last <span id="work-timeframe-previous">Week - 36hrs</span></p>
+        </div>
+      </div>
+    </div> <!-- work-card -->
+
+    <div class="card play-card">
+      <div class="card-header">
+        <img class="icon" src="./images/icon-play.svg" alt="play-icon">
+      </div>
+      <div class="card-body">
+        <div class="card-title">
+          <span>Play</span>
+          <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+        </div>
+        <div class="card-content">
+          <h1 id="play-timeframe-current">10hrs</h1>
+          <p>Last <span id="play-timeframe-previous">Week - 8hrs</span></p>
+        </div>
+      </div>
+    </div> <!-- play-card -->
+
+    <div class="card study-card">
+      <div class="card-header">
+        <img class="icon" src="./images/icon-study.svg" alt="study-icon">
+      </div>
+      <div class="card-body">
+        <div class="card-title">
+          <span>Study</span>
+          <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+        </div>
+        <div class="card-content">
+          <h1 id="study-timeframe-current">4hrs</h1>
+          <p>Last <span id="study-timeframe-previous">Week - 7hrs</span></p>
+        </div>
+      </div>
+    </div> <!-- study-card -->
+
+    <div class="card exercise-card">
+      <div class="card-header">
+        <img class="icon" src="./images/icon-exercise.svg" alt="exercise-icon">
+      </div>
+      <div class="card-body">
+        <div class="card-title">
+          <span>Exercise</span>
+          <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+        </div>
+        <div class="card-content">
+          <h1 id="exercise-timeframe-current">4hrs</h1>
+          <p>Last <span id="exercise-timeframe-previous">Week - 5hrs</span></p>
+        </div>
+      </div>
+    </div> <!-- exercise-card -->
+
+    <div class="card social-card ">
+      <div class="card-header">
+        <img class="icon" src="./images/icon-social.svg" alt="social-icon">
+      </div>
+      <div class="card-body">
+        <div class="card-title">
+          <span>Social</span>
+          <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+        </div>
+        <div class="card-content">
+          <h1 id="social-timeframe-current">5hrs</h1>
+          <p>Last <span id="social-timeframe-previous">Week - 10hrs</span></p>
+        </div>
+      </div>
+    </div> <!-- social-card -->
+
+    <div class="card selfcare-card">
+      <div class="card-header">
+        <img class="icon" src="./images/icon-self-care.svg" alt="self-care-icon">
+      </div>
+      <div class="card-body">
+        <div class="card-title">
+          <span>Self Care</span>
+          <img class="ellipsis" src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+        </div>
+        <div class="card-content">
+          <h1 id="selfcare-timeframe-current">2hrs</h1>
+          <p>Last <span id="selfcare-timeframe-previous">Week - 2hrs</span></p>
+        </div>
+      </div>
+    </div> <!-- selfcare-card -->
+
+  </section> <!-- grid-container -->
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/DragonBoiGelius">Rostyslav Tsarkov</a>.
+  </div>
+
+  <script src="main.js" onload="onLoad()"></script> 
+</body>
+
+</html>
